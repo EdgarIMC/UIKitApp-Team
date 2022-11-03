@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 final class SignUpViewController: UIViewController {
 
@@ -31,6 +32,8 @@ final class SignUpViewController: UIViewController {
         if pwdTxtField.text != "" {
             pwdTxtField.removeShake()
         }
+        
+        registerUser()
     }
     
     @IBAction func didTapSignIn(_ sender: Any) {
@@ -38,7 +41,43 @@ final class SignUpViewController: UIViewController {
         if emailTxtField.text != nil {
             emailTxtField.removeShake()
         }
+        validateUser()
     }
+    
+    func registerUser(){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        let context = appDelegate.persistentContainer.viewContext
+        let userEntity = NSEntityDescription.entity(forEntityName: "User", in: context)!
+        
+        let user = NSManagedObject(entity: userEntity, insertInto: context)
+        user.setValue(fullNameTxtField.text, forKey: "fullName")
+        user.setValue(emailTxtField.text, forKey: "email")
+        user.setValue(pwdTxtField.text, forKey: "password")
+        
+        do{
+            try context.save()
+        }catch let error as NSError {
+            print("No se pudo guardar el registro.. \(error)")
+        }
+    }
+    
+    func validateUser() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        do {
+            let result = try context.fetch(fetchRequest)
+            for data in result as! [NSManagedObject]{
+                print(data.value(forKey: "fullName") as! String)
+            }
+            
+        }catch{
+            print("Fail")
+        }
+        
+    }
+    
+    
 }
 
 // MARK: - Static Methods

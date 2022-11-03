@@ -28,6 +28,7 @@
 		1CAE3B5228D37F0D008E10A3 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAE3B5128D37F0D008E10A3 /* CustomColor.swift */; };
 		1CAE3B5428D37F25008E10A3 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAE3B5328D37F25008E10A3 /* PrimaryButton.swift */; };
 		1CAE3B5628D37F43008E10A3 /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAE3B5528D37F43008E10A3 /* PrimaryTextField.swift */; };
+		5D51A861291479A9008E3918 /* User.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D51A85F291479A9008E3918 /* User.xcdatamodeld */; };
 		F0BEC69A2914759D008E21BC /* TextField+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BEC6992914759D008E21BC /* TextField+Animation.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		1CAE3B5128D37F0D008E10A3 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		1CAE3B5328D37F25008E10A3 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		1CAE3B5528D37F43008E10A3 /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
+		5D51A860291479A9008E3918 /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
 		F0BEC6992914759D008E21BC /* TextField+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Animation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +181,7 @@
 		1CAE36D528D2F5F4008E10A3 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				5D51A862291482BF008E3918 /* Model */,
 				1CAE36D828D2F657008E10A3 /* SignUpViewController.swift */,
 				1CAE36DA28D2F6C2008E10A3 /* SignUp.storyboard */,
 			);
@@ -212,6 +215,14 @@
 				1CAE36E828D371BC008E10A3 /* LocalizableKeys.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		5D51A862291482BF008E3918 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D51A85F291479A9008E3918 /* User.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +365,7 @@
 				1CAE36D928D2F657008E10A3 /* SignUpViewController.swift in Sources */,
 				1CAE3B5428D37F25008E10A3 /* PrimaryButton.swift in Sources */,
 				1CAE36E328D3703A008E10A3 /* SignInStyles.swift in Sources */,
+				5D51A861291479A9008E3918 /* User.xcdatamodeld in Sources */,
 				1CAE36E928D371BC008E10A3 /* LocalizableKeys.swift in Sources */,
 				1CAE36CF28D2F56C008E10A3 /* WelcomeViewController.swift in Sources */,
 				1CAE369E28D2672C008E10A3 /* AppDelegate.swift in Sources */,
@@ -688,6 +700,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5D51A85F291479A9008E3918 /* User.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5D51A860291479A9008E3918 /* User.xcdatamodel */,
+			);
+			currentVersion = 5D51A860291479A9008E3918 /* User.xcdatamodel */;
+			path = User.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1CAE369228D2672C008E10A3 /* Project object */;
 }
