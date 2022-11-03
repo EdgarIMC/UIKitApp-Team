@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +12,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="E42-Vs-3ZJ">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="Uev-gG-JIm" customClass="SignUpViewController" customModule="Tech_Talk_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="Uev-gG-JIm" customClass="SignUpViewController" customModule="UIKitApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mKs-Z2-GEo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +26,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ixU-tK-pbe">
                                 <rect key="frame" x="46" y="410.5" width="322" height="172"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mNd-dA-fNZ" customClass="PrimaryTextField" customModule="Tech_Talk_Demo" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mNd-dA-fNZ" customClass="CustomTextField" customModule="UIKitApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="322" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="QkP-39-Sdb"/>
@@ -33,7 +34,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ElF-WV-bCE" customClass="PrimaryTextField" customModule="Tech_Talk_Demo" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ElF-WV-bCE" customClass="CustomTextField" customModule="UIKitApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="322" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="4PR-Re-Mw8"/>
@@ -41,7 +42,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdE-K8-gdT" customClass="PrimaryTextField" customModule="Tech_Talk_Demo" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdE-K8-gdT" customClass="CustomTextField" customModule="UIKitApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="128" width="322" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="jFN-I7-Wqq"/>
@@ -81,7 +82,7 @@ Register Now!</string>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17G-rm-lrd" customClass="PrimaryButton" customModule="Tech_Talk_Demo" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17G-rm-lrd" customClass="PrimaryButton" customModule="UIKitApp" customModuleProvider="target">
                                 <rect key="frame" x="46" y="707" width="322" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="HwL-Oe-PE3"/>
@@ -114,6 +115,11 @@ Register Now!</string>
                             <constraint firstItem="Tm0-iy-MKn" firstAttribute="trailing" secondItem="17G-rm-lrd" secondAttribute="trailing" constant="46" id="rRT-T7-jqF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTxtField" destination="mNd-dA-fNZ" id="zaJ-bM-Lqa"/>
+                        <outlet property="fullNameTxtField" destination="ElF-WV-bCE" id="dt6-iI-XT2"/>
+                        <outlet property="pwdTxtField" destination="gdE-K8-gdT" id="ocX-Qq-dr6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8UL-Dd-ULw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,16 +128,7 @@ Register Now!</string>
     </scenes>
     <designables>
         <designable name="17G-rm-lrd">
-            <size key="intrinsicContentSize" width="73" height="34"/>
-        </designable>
-        <designable name="ElF-WV-bCE">
-            <size key="intrinsicContentSize" width="92.5" height="34"/>
-        </designable>
-        <designable name="gdE-K8-gdT">
-            <size key="intrinsicContentSize" width="90.5" height="34"/>
-        </designable>
-        <designable name="mNd-dA-fNZ">
-            <size key="intrinsicContentSize" width="62.5" height="34"/>
+            <size key="intrinsicContentSize" width="70" height="34"/>
         </designable>
     </designables>
     <resources>
