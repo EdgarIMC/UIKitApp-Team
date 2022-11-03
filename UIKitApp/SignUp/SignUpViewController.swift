@@ -9,17 +9,35 @@ import UIKit
 
 final class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var emailTxtField: CustomTextField!
+    @IBOutlet weak var fullNameTxtField: CustomTextField!
+    @IBOutlet weak var pwdTxtField: CustomTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     // MARK: - IBActions
     @IBAction func didTapSignUp(_ sender: Any) {
-        
+        emailTxtField.addShake()
+        fullNameTxtField.addShake()
+        pwdTxtField.addShake()
+        if emailTxtField.text != "" {
+            emailTxtField.removeShake()
+        }
+        if fullNameTxtField.text != "" {
+            fullNameTxtField.removeShake()
+        }
+        if pwdTxtField.text != "" {
+            pwdTxtField.removeShake()
+        }
     }
     
     @IBAction func didTapSignIn(_ sender: Any) {
-        
+        emailTxtField.addShake()
+        if emailTxtField.text != nil {
+            emailTxtField.removeShake()
+        }
     }
 }
 
