@@ -11,6 +11,7 @@ struct SignInView: View {
     
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var emptyFields = false
     
     var body: some View {
         VStack(spacing: SignInConstants.bodySpacing) {
@@ -36,8 +37,15 @@ struct SignInView: View {
             Spacer()
             
             VStack(spacing: SignInConstants.buttonSpacing) {
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {
+                    if email == "" || password == "" {
+                        emptyFields = true
+                    }
+                }) {
                     Text(LocalizableKeys.SignIn.signInButtonTitle)
+                }
+                .alert(isPresented: $emptyFields) {
+                    Alert(title: Text("EMPTY FIELDS"), message: Text("Please, fill the fields"), dismissButton: .cancel(Text("Accept")))
                 }
                 .buttonStyle(SignInButtonStyle())
                 
